@@ -1,3 +1,13 @@
-<%= $player_one.name %> VS. <%= $player_two.name %>
+<div style='display:inline-block'>
+<p><%= $player_one.name %></p>
+<p><%= $player_one.hp %></p>
+</div>
 
-Player 2 HP: <%= @player_two_hp %>
+<div style='display:inline-block'>
+ <p>VS.</p>
+ </div>
+
+ <div style='display:inline-block'>
+   <p><%= $player_two.name %></p>
+   <p><%= $player_two.hp %></p>
+ </div>
