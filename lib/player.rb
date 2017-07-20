@@ -1,7 +1,6 @@
 class Player
 
   DEFAULT_HP = 70
-  DEFAULT_HIT_STRENGTH = 10
 
   attr_reader :name, :hp
 
@@ -10,9 +9,9 @@ class Player
     @hp = hp
   end
 
-  def attack(hit_strength)
-    hit_strength = DEFAULT_HIT_STRENGTH
-    @hp -= hit_strength
-  end
+  # def attack(hit_strength)
+  #   hit_strength = DEFAULT_HIT_STRENGTH
+  #   @hp -= hit_strength
+  # end
 
 end
