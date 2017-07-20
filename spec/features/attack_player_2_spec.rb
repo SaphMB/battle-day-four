@@ -7,6 +7,6 @@ feature 'attacking the opponent' do
   scenario 'player 1 attacks player 2, HP reduces' do
     sign_in_and_play
     click_button "Attack"
-    expect(page).to have_content("Kat 60HP")
+    expect("/confirm_hit").to have_content("Kat 60HP")
   end
 end
