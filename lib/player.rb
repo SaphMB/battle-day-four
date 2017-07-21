@@ -9,9 +9,8 @@ class Player
     @hp = hp
   end
 
-  # def attack(hit_strength)
-  #   hit_strength = DEFAULT_HIT_STRENGTH
-  #   @hp -= hit_strength
-  # end
+  def reduce_points
+    @hp -= 10
+  end
 
 end

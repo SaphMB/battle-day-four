@@ -9,4 +9,7 @@ feature 'attacking the opponent' do
     click_button "Attack"
     expect("/confirm_hit").to have_content("Kat 60HP")
   end
+
+
+
 end

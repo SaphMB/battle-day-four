@@ -7,11 +7,9 @@ class Game
     @player2 = player2
   end
 
-  def attack(hit_strength)
+  def attack(player)
     hit_strength = DEFAULT_HIT_STRENGTH
-    @player.hp -= hit_strength
+    @player.reduce_points
   end
-
- # in app:  game.player1.attack
 
 end

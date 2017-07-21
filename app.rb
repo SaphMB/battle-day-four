@@ -23,14 +23,8 @@ STARTING_HP = 70
     erb :play
   end
 
-  # post '/play' do
-  #   erb :play
-  # end
-
   post '/confirm_hit' do
-    # params[:hit_strength] = DEFAULT_HIT_STRENGTH
-    $player_two.attack(params[:hit_strength])
-    params
+    $player_two.reduce_points
     erb :confirm_hit
   end
 
