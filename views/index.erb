@@ -1,5 +1,41 @@
-<form name="players" action="/names" method="post">
-  Player one name: <input type="text" name="player_one_name">
-  Player two name: <input type="text" name="player_two_name">
-<input type="submit" value="May the battle begin!">
-</form>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+
+<style>
+  body {
+  background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fffcdc, #d9a7c7);
+  font-family: "Helvetica", "Arial", sans-serif;
+  }
+  h1 {
+    font-family: "Raleway", sans-serif
+    }
+</style>
+<body>
+
+<div style='text-align:center'>
+  <h1>Cats vs Aliens </h1>
+</div>
+
+<div>
+  <form name="players" action="/names" method="post">
+    <div style='display:flex'; 'flex-direction:column'>
+      <div>
+        <img src= "https://goo.gl/FmuUcg" height="400" > <br>
+        Player one name: <input type="text" name="player_one_name">
+      </div>
+
+      <div>
+        <img src= "https://goo.gl/CngGFN" height="400"> <br>
+        Player two name: <input type="text" name="player_two_name">
+      </div>
+    <div>
+</div>
+
+<div>
+  <input type="submit" value="May the battle begin!">
+  </form>
+</div>
+
+</body>
