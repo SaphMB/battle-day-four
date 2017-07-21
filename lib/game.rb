@@ -2,14 +2,15 @@ class Game
 
   DEFAULT_HIT_STRENGTH = 10
 
-  def initialize(player1, player2)
-    @player1 = player1
-    @player2 = player2
+  attr_reader :player_one, :player_two
+
+  def initialize(player_one, player_two)
+    @player_one = player_one
+    @player_two = player_two
   end
 
   def attack(player)
-    hit_strength = DEFAULT_HIT_STRENGTH
-    @player.reduce_points
+    player.reduce_points
   end
 
 end
