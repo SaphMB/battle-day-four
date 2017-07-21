@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative 'lib/player.rb'
+require_relative 'lib/game.rb'
 require 'pry'
 
 class Battle < Sinatra::Base
@@ -12,19 +13,18 @@ STARTING_HP = 70
   end
 
   post '/names' do
-    $player_one = Player.new(params[:player_one_name])
-    $player_two = Player.new(params[:player_two_name])
+    $game = Game.new(Player.new(params[:player_one_name]), Player.new(params[:player_two_name]) )
     redirect '/play'
   end
 
   get '/play' do
-    $player_one
-    $player_two
+    $game.player_one
+    $game.player_two
     erb :play
   end
 
   post '/confirm_hit' do
-    $player_two.reduce_points
+    $game.player_two.reduce_points
     erb :confirm_hit
   end
 
