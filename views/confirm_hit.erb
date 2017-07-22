@@ -1,1 +1,8 @@
+<h1>Ouch! <%= $game.current_turn.name%> recieved a blow! <h1>
+
 <%= $game.player_two.name %> <%= $game.player_two.hp %>HP
+
+<form name="input" action="/play" method="get">
+  <input type="submit" value="Switch!">
+</form>
+</div>

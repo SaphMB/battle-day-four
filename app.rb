@@ -24,8 +24,10 @@ STARTING_HP = 70
     erb :play
   end
 
-  post '/confirm_hit' do
-    @game.attack(player_two)
+  get '/confirm_hit' do
+    @game = $game
+    @game.attack(@game.opponent_of(@game.current_turn))
+    @game.switch_turns
     erb :confirm_hit
   end
 

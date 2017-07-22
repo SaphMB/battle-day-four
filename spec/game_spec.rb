@@ -17,9 +17,17 @@ describe Game do
     end
   end
 
-  it 'reduces HP when attacked' do
-    expect(game.player_two).to receive(:reduce_points)
-    game.attack(game.player_two)
+  describe '#attack' do
+    it 'reduces HP when attacked' do
+      expect(game.player_two).to receive(:reduce_points)
+      game.attack(game.player_two)
+    end
+  end
+
+  describe '#current_turn' do
+    it 'player one is first' do
+    expect(game.current_turn).to eq player_one
+    end
   end
 
 end
