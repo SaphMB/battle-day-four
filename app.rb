@@ -13,18 +13,19 @@ STARTING_HP = 70
   end
 
   post '/names' do
-    $game = Game.new(Player.new(params[:player_one_name]), Player.new(params[:player_two_name]) )
+    player_one = Player.new(params[:player_one_name])
+    player_two = Player.new(params[:player_two_name])
+    $game = Game.new(player_one, player_two)
     redirect '/play'
   end
 
   get '/play' do
-    $game.player_one
-    $game.player_two
+    @game = $game
     erb :play
   end
 
   post '/confirm_hit' do
-    $game.player_two.reduce_points
+    @game.attack(player_two)
     erb :confirm_hit
   end
 
